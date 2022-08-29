@@ -88,32 +88,41 @@
                                 </div>
                             </form>
                             <div id="sign-ready">
-                                <h3 class="title is-4">This is your email signature:</h3>
                                 <div class="column" id="final-signature">
-                                    <div class="" id="editor1" contenteditable="true">
-                                    <img src="https://cdn.discordapp.com/attachments/989150316031270922/1009196467057082418/64px_h.png" alt="">   
-                                    <div style="height: 2px;"></div>
-                                    <div style="margin-left: 10px; height: 20px;"><span id="name" style="font-family: 'Poppins'; color: #674ea7; font-size: 18px; font-weight: 510;">dsa</span></div>                    
-                                    <div style="height: 2px;"></div>
-                                    <div style="margin-left: 10px;"><span id="charge" style="font-family: 'Poppins'; color: #6c8088; font-size: 12px;">SDA</span></div>
-                                    <div style="height: 10px;"></div>
-                                    <div style="margin-left: 10px;">
-                                        <strong style="font-family: 'Poppins'; color: #AF4DB3; font-size: 12px;">US </strong> <span style="font-family: 'Poppins'; color: #AF4DB3; color: #6c8088; font-size: 12px;">+1 949 209-8779 | </span>
-                                        <strong style="font-family: 'Poppins'; color: #AF4DB3; font-size: 12px;">ARG </strong><span style="font-family: 'Poppins'; color: #AF4DB3; color: #6c8088; font-size: 12px;">+54 351 471-8727 </span>
+                                    <div class="columns mt-4">
+                                        <h3 class="title is-4">This is your email signature:</h3>
                                     </div>
-                                    <div style="margin-left: 10px;"><a style="font-family: 'Poppins'; color: #6c8088; font-size: 12px; text-decoration:none;" href="http://www.voyansi.com/"><span>voyansi.com</span></a></div>
+                                    <div class="columns box is-centered mt-5 mb-5">
+                                        <div class="" id="editor1" contenteditable="true">
+                                        <img src="https://cdn.discordapp.com/attachments/989150316031270922/1009196467057082418/64px_h.png" alt="">   
+                                        <div style="height: 2px;"></div>
+                                        <div style="margin-left: 10px; height: 20px;"><span id="name" style="font-family: 'Poppins'; color: #674ea7; font-size: 18px; font-weight: 510;">dsa</span></div>                    
+                                        <div style="height: 2px;"></div>
+                                        <div style="margin-left: 10px;"><span id="charge" style="font-family: 'Poppins'; color: #6c8088; font-size: 12px;">SDA</span></div>
+                                        <div style="height: 10px;"></div>
+                                        <div style="margin-left: 10px;">
+                                            <strong style="font-family: 'Poppins'; color: #AF4DB3; font-size: 12px;">US </strong> <span style="font-family: 'Poppins'; color: #AF4DB3; color: #6c8088; font-size: 12px;">+1 949 209-8779 | </span>
+                                            <strong style="font-family: 'Poppins'; color: #AF4DB3; font-size: 12px;">ARG </strong><span style="font-family: 'Poppins'; color: #AF4DB3; color: #6c8088; font-size: 12px;">+54 351 471-8727 </span>
+                                        </div>
+                                        <div style="margin-left: 10px;"><a style="font-family: 'Poppins'; color: #6c8088; font-size: 12px; text-decoration:none;" href="http://www.voyansi.com/"><span>voyansi.com</span></a></div>
                                     </div>
                                 </div>
-                                <div id="button-copy">
-                                    <button id="button1" class="button is-info is-outlined" onclick="CopyToClipboard()">COPY</button>
-                                    <resp id="respText"></resp>
-                                </div>
-                                <div id="description">
-                                    <b>STEP 1: Press copy to copy the signature</b>
                                 
-                                    <b>STEP 2: Press CTRL + V to paste the signature into webmail</b>
+                                    <div id="button-copy" class=" columns">
+                                    <div class="column is-one-third"><button id="button1" class="button is-info is-outlined" onclick="CopyToClipboard()">COPY</button></div>
+                                    <div class="column"><span class="tag is-danger" id="respText"></span></div>
                                 </div>
-                                        <a class="btn btn-primary btn-block" href="https://mail.google.com/mail/u/0/#settings/general" target="_blank">Open webmail configuration</a>
+                                </div>
+                                
+                                <div id="description" class="column notification">
+                                   
+                                        <div class="column"><b>STEP 1: Press copy to copy the signature</b></div>
+                                
+                                    <div class="column"><b>STEP 2: Press CTRL + V to paste the signature into webmail</b></div>
+                                </div>
+                                <form action="https://mail.google.com/mail/u/0/#settings/general">
+                                    <input type="submit" class="button is-medium is-fullwidth" value="Go to Google mail conf." />
+                                </form>
                                 </div>
                             </div>
                     </div>

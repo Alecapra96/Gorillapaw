@@ -23,5 +23,6 @@ let respText = document.getElementById("respText");
     document.execCommand("copy");
     copyBoxElement.contenteditable = false;
     respText.textContent = "Signature has been copied to the clipboard";
-    respText.style.color = "red";    
+      
+    respText.style.visibility= "visible";
 }
