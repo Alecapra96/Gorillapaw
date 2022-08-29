@@ -7,7 +7,8 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
     <!-- Bulma Version 0.9.0-->
     <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css">
-    <link rel="stylesheet" type="text/css" href="../css/admin.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.scss">
+    <link rel="stylesheet" href="../css/signature.css">
 </head>
 
 <body>
@@ -71,24 +72,56 @@
                         
                 </aside>
             </div>
-            <div class="column is-9">
-
-                
+            <div class="column is-9">       
                 <div class="columns">
                     <div class="hero-body">
                         <div class="container py-5 px-5">
-                            <h1 class="title">
-                                Hello, Admin.
-                            </h1>
-                            <h2 class="subtitle">
-                                I hope you are having a great day!
-                            </h2>
-                        </div>
-                </div>
+
+                            <h1 class="title is-1">Signature Generator</h1>
+                            <p class="subtitle is-3">Create a professional signature for your mail</p>
+
+                            <form id="signature-event">
+                                <div class="columns">
+                                    <div class="column "><input type="text" class="input" id="first-last-name" placeholder="First and last name"></div>
+                                    <div class="column "><input type="text" class="input" id="charge-signature" placeholder="Charge"></div>
+                                    <div class="column"><button type="submit" class="button is-link">Create</button></div>
+                                </div>
+                            </form>
+                            <div id="sign-ready">
+                                <h3 class="title is-4">This is your email signature:</h3>
+                                <div class="column" id="final-signature">
+                                    <div class="" id="editor1" contenteditable="true">
+                                    <img src="https://cdn.discordapp.com/attachments/989150316031270922/1009196467057082418/64px_h.png" alt="">   
+                                    <div style="height: 2px;"></div>
+                                    <div style="margin-left: 10px; height: 20px;"><span id="name" style="font-family: 'Poppins'; color: #674ea7; font-size: 18px; font-weight: 510;">dsa</span></div>                    
+                                    <div style="height: 2px;"></div>
+                                    <div style="margin-left: 10px;"><span id="charge" style="font-family: 'Poppins'; color: #6c8088; font-size: 12px;">SDA</span></div>
+                                    <div style="height: 10px;"></div>
+                                    <div style="margin-left: 10px;">
+                                        <strong style="font-family: 'Poppins'; color: #AF4DB3; font-size: 12px;">US </strong> <span style="font-family: 'Poppins'; color: #AF4DB3; color: #6c8088; font-size: 12px;">+1 949 209-8779 | </span>
+                                        <strong style="font-family: 'Poppins'; color: #AF4DB3; font-size: 12px;">ARG </strong><span style="font-family: 'Poppins'; color: #AF4DB3; color: #6c8088; font-size: 12px;">+54 351 471-8727 </span>
+                                    </div>
+                                    <div style="margin-left: 10px;"><a style="font-family: 'Poppins'; color: #6c8088; font-size: 12px; text-decoration:none;" href="http://www.voyansi.com/"><span>voyansi.com</span></a></div>
+                                    </div>
+                                </div>
+                                <div id="button-copy">
+                                    <button id="button1" class="button is-info is-outlined" onclick="CopyToClipboard()">COPY</button>
+                                    <resp id="respText"></resp>
+                                </div>
+                                <div id="description">
+                                    <b>STEP 1: Press copy to copy the signature</b>
+                                
+                                    <b>STEP 2: Press CTRL + V to paste the signature into webmail</b>
+                                </div>
+                                        <a class="btn btn-primary btn-block" href="https://mail.google.com/mail/u/0/#settings/general" target="_blank">Open webmail configuration</a>
+                                </div>
+                            </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    <script src="../js/toolsJS.js"></script>
     <script async="" type="text/javascript" src="../js/bulma.js"></script>
 
 
