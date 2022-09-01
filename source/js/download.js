@@ -5,7 +5,7 @@ const navisworkList = document.getElementById("naviswork-list");
 const recapList = document.getElementById("recap-list");
 const bluebeamList = document.getElementById("bluebeam-list");
 const otherList = document.getElementById("other-list");
-const addinsList = document.getElementById("addins-list");
+const cloudcompareList = document.getElementById("cloudcompare-list");
 
 
 const searchContainer =document.getElementById("search-container");
@@ -15,7 +15,7 @@ const navisworkContainer = document.getElementById("naviswork-container");
 const recapContainer = document.getElementById("recap-container");
 const bluebeamContainer = document.getElementById("bluebeam-container");
 const otherContainer = document.getElementById("other-container");
-const addinsContainer = document.getElementById("addins-container");
+const cloudcompareContainer = document.getElementById("cloudcompare-container");
 
 
 searchList.onclick = function(e){
@@ -53,9 +53,9 @@ otherList.onclick = function(e){
     softwareShow(otherList,otherContainer);
     };
         
-addinsList.onclick = function(e){
+cloudcompareList.onclick = function(e){
     e.preventDefault();
-    softwareShow(addinsList,addinsContainer);
+    softwareShow(cloudcompareList,cloudcompareContainer);
     };
     
 
@@ -83,8 +83,8 @@ function resetIsActive(){
     bluebeamContainer.className = "";
     otherList.className = "";
     otherContainer.className = "";
-    addinsList.className = "";
-    addinsContainer.className = "";
+    cloudcompareList.className = "";
+    cloudcompareContainer.className = "";
 }
 function hideAllContainer(){
     revitContainer.style.display = "none";
@@ -93,7 +93,7 @@ function hideAllContainer(){
     recapContainer.style.display = "none";
     bluebeamContainer.style.display = "none";
     otherContainer.style.display = "none";
-    addinsContainer.style.display = "none";
+    cloudcompareContainer.style.display = "none";
     searchContainer.style.display = "none";
 
 }
