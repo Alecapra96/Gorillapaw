@@ -1,3 +1,6 @@
 .is-inactive{
     display: none;
 }
+#searchbar{
+    align-items: center;
+}
