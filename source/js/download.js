@@ -6,6 +6,19 @@ const recapList = document.getElementById("recap-list");
 const bluebeamList = document.getElementById("bluebeam-list");
 const otherList = document.getElementById("other-list");
 const cloudcompareList = document.getElementById("cloudcompare-list");
+const bimcollaborateList = document.getElementById("bimcollaborate-list");
+const bimproList = document.getElementById("bimpro-list");
+const cordinationissuesList = document.getElementById("cordinationissues-list");
+const dirootsList = document.getElementById("diroots-list");
+const stlexporterList = document.getElementById("stlexporter-list");
+const dynamoList = document.getElementById("dynamo-list");
+const bimtrackList = document.getElementById("bimtrack-list");
+const bimtoolsList = document.getElementById("bimtools-list");
+const evolveList = document.getElementById("evolve-list");
+const procoreList = document.getElementById("procore-list");
+const pyrevitList = document.getElementById("pyrevit-list");
+const synchroList = document.getElementById("synchro-list");
+const pointList = document.getElementById("point-list");
 
 
 const searchContainer =document.getElementById("search-container");
@@ -16,7 +29,19 @@ const recapContainer = document.getElementById("recap-container");
 const bluebeamContainer = document.getElementById("bluebeam-container");
 const otherContainer = document.getElementById("other-container");
 const cloudcompareContainer = document.getElementById("cloudcompare-container");
-
+const bimcollaborateContainer = document.getElementById("bimcollaborate-container");
+const bimproContainer = document.getElementById("bimpro-container");
+const cordinationissuesContainer = document.getElementById("cordinationissues-container");
+const dirootsContainer = document.getElementById("diroots-container");
+const stlexporterContainer = document.getElementById("stlexporter-container");
+const dynamoContainer = document.getElementById("dynamo-container");
+const bimtrackContainer = document.getElementById("bimtrack-container");
+const bimtoolsContainer = document.getElementById("bimtools-container");
+const evolveContainer = document.getElementById("evolve-container");
+const procoreContainer = document.getElementById("procore-container");
+const pyrevitContainer = document.getElementById("pyrevit-container");
+const synchroContainer = document.getElementById("synchro-container");
+const pointContainer = document.getElementById("point-container");
 
 searchList.onclick = function(e){
     e.preventDefault();
@@ -58,7 +83,12 @@ cloudcompareList.onclick = function(e){
     softwareShow(cloudcompareList,cloudcompareContainer);
     };
     
-
+    bimcollaborateList.onclick = function(e){
+        e.preventDefault();
+        softwareShow(bimcollaborateList,bimcollaborateContainer);
+        };
+        
+        
 function softwareShow(softwareList,softwareContainer){
     hideAllContainer();
     resetIsActive();
@@ -85,6 +115,8 @@ function resetIsActive(){
     otherContainer.className = "";
     cloudcompareList.className = "";
     cloudcompareContainer.className = "";
+    bimcollaborateList.className = "";
+    bimcollaborateContainer.className = "";
 }
 function hideAllContainer(){
     revitContainer.style.display = "none";
@@ -95,6 +127,7 @@ function hideAllContainer(){
     otherContainer.style.display = "none";
     cloudcompareContainer.style.display = "none";
     searchContainer.style.display = "none";
+    bimcollaborateContainer.style.display = "none";
 
 }
 
