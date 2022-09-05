@@ -83,19 +83,79 @@ cloudcompareList.onclick = function(e){
     softwareShow(cloudcompareList,cloudcompareContainer);
     };
     
-    bimcollaborateList.onclick = function(e){
-        e.preventDefault();
-        softwareShow(bimcollaborateList,bimcollaborateContainer);
-        };
-        
-        
+bimcollaborateList.onclick = function(e){
+    e.preventDefault();
+    softwareShow(bimcollaborateList,bimcollaborateContainer);
+    };
+
+bimproList.onclick = function(e){
+    e.preventDefault();
+    softwareShow(bimproList,bimproContainer);
+    };
+
+cordinationissuesList.onclick = function(e){
+    e.preventDefault();
+    softwareShow(cordinationissuesList,cordinationissuesContainer);
+    };
+    
+dirootsList.onclick = function(e){
+    e.preventDefault();
+    softwareShow(dirootsList,dirootsContainer);
+    };
+
+stlexporterList.onclick = function(e){
+    e.preventDefault();
+    softwareShow(stlexporterList,stlexporterContainer);
+    };
+
+dynamoList.onclick = function(e){
+    e.preventDefault();
+    softwareShow(dynamoList,dirootsContainer);
+    };
+
+bimtrackList.onclick = function(e){
+    e.preventDefault();
+    softwareShow(bimtrackList,bimtrackContainer);
+    };
+
+bimtoolsList.onclick = function(e){
+    e.preventDefault();
+    softwareShow(bimtoolsList,bimtoolsContainer);
+    };
+
+evolveList.onclick = function(e){
+    e.preventDefault();
+    softwareShow(evolveList,evolveContainer);
+    };
+
+procoreList.onclick = function(e){
+    e.preventDefault();
+    softwareShow(procoreList,procoreContainer);
+    };
+
+pyrevitList.onclick = function(e){
+    e.preventDefault();
+    softwareShow(pyrevitList,pyrevitContainer);
+    };
+
+synchroList.onclick = function(e){
+    e.preventDefault();
+    softwareShow(synchroList,synchroContainer);
+    };
+
+pointList.onclick = function(e){
+    e.preventDefault();
+    softwareShow(pointList,pointContainer);
+    };
+
 function softwareShow(softwareList,softwareContainer){
     hideAllContainer();
-    resetIsActive();
+     resetIsActive();
     softwareList.className = "is-active";
     softwareContainer.style.display = "block";
 
 }
+
 
 
 function resetIsActive(){
@@ -117,7 +177,33 @@ function resetIsActive(){
     cloudcompareContainer.className = "";
     bimcollaborateList.className = "";
     bimcollaborateContainer.className = "";
+    bimproList.className = "";
+    bimproContainer.className = "";
+    cordinationissuesList.className = "";
+    cordinationissuesContainer.className = "";
+    dirootsList.className = "";
+    dirootsContainer.className = "";
+    stlexporterList.className = "";
+    stlexporterContainer.className = "";
+    dynamoList.className = "";
+    dynamoContainer.className = "";
+    bimtrackList.className = "";
+    bimtrackContainer.className = "";
+    bimtoolsList.className = "";
+    bimtoolsContainer.className = "";
+    evolveList.className = "";
+    evolveContainer.className = "";
+    procoreList.className = "";
+    procoreContainer.className = "";
+    pyrevitList.className = "";
+    pyrevitContainer.className = "";
+    synchroList.className = "";
+    synchroContainer.className = "";
+    pointList.className = "";
+    pointContainer.className = "";
 }
+
+
 function hideAllContainer(){
     revitContainer.style.display = "none";
     autocadContainer.style.display = "none";
@@ -128,7 +214,18 @@ function hideAllContainer(){
     cloudcompareContainer.style.display = "none";
     searchContainer.style.display = "none";
     bimcollaborateContainer.style.display = "none";
-
+    bimproContainer.style.display = "none";
+    cordinationissuesContainer.style.display = "none";
+    dirootsContainer.style.display = "none";
+    stlexporterContainer.style.display = "none";
+    dynamoContainer.style.display = "none";
+    bimtrackContainer.style.display = "none";
+    bimtoolsContainer.style.display = "none";
+    evolveContainer.style.display = "none";
+    procoreContainer.style.display = "none";
+    pyrevitContainer.style.display = "none";
+    synchroContainer.style.display = "none";
+    pointContainer.style.display = "none";
 }
 
 function myFunction() { // Cada vez que se aprieta enter corre este evento
