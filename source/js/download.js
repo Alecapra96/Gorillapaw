@@ -110,7 +110,7 @@ stlexporterList.onclick = function(e){
 
 dynamoList.onclick = function(e){
     e.preventDefault();
-    softwareShow(dynamoList,dirootsContainer);
+    softwareShow(dynamoList,dynamoContainer);
     };
 
 bimtrackList.onclick = function(e){

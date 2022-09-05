@@ -7,3 +7,9 @@
     visibility: hidden;
 
 }
+#image-search{
+    
+    display: flex;
+    flex-direction: row-reverse;
+
+}

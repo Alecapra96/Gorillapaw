@@ -4,3 +4,9 @@
 #searchbar{
     align-items: center;
 }
+#image-search{
+    
+    display: flex;
+    flex-direction: row-reverse;
+
+}
