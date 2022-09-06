@@ -5,6 +5,7 @@ $formsignature.addEventListener("submit", createSignature);
 
 function createSignature(event){
     event.preventDefault();
+    document.getElementById("img-search").style.display = "none";
     let $nameSignature = document.getElementById("first-last-name").value.toUpperCase();
     let $chargenameSignature = document.getElementById("charge-signature").value.toUpperCase();
     let $divSignature = document.getElementById("sign-ready");

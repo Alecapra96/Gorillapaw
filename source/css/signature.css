@@ -1,15 +1,10 @@
 #sign-ready{
     visibility: hidden;
 }
-
-
 #respText{
     visibility: hidden;
-
 }
 #image-search{
-    
     display: flex;
     flex-direction: row-reverse;
-
 }

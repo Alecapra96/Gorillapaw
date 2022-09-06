@@ -45,6 +45,8 @@ const pointContainer = document.getElementById("point-container");
 
 searchList.onclick = function(e){
     e.preventDefault();
+    document.getElementById("img-search").style.display = "block";
+
     softwareShow(searchList,searchContainer);
     };
 
@@ -231,6 +233,7 @@ function hideAllContainer(){
 function myFunction() { // Cada vez que se aprieta enter corre este evento
     if (event.keyCode == 13) {
         console.log("entre")
+    document.getElementById("img-search").style.display = "none";
     var input = document.getElementById("Search");
     var searchValue = input.value.toLowerCase();
    
