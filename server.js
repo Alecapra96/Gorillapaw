@@ -21,10 +21,18 @@ app.use(cookieSession({
   }))
 // View engine setup
 app.set('view engine', 'ejs');
-app.use(express.static("./public"));
+app.use(express.static(__dirname + '/public'));
 // Auth middleware that checks if the user is logged in
+let username;
+let lastname;
+let picture;
 const isLoggedIn = (req, res, next) => {
     if (req.user) {
+      username = req.user.name.givenName
+      lastname = req.user.name.familyName
+      picture = req.user.photos[0].value
+      console.log(lastname)
+
         next();
     } else {
         res.sendStatus(401);
@@ -41,8 +49,12 @@ app.get('/failed', (req, res) => res.send('You Failed to log in!'))
 
 // In this route you can see that if the user is logged in u can acess his info in: req.user
 app.get('/home', isLoggedIn, (req, res) => 
+
 // res.send(`Welcome mr ${req.user.displayName}!`)
-res.render('home')
+res.render('home', { username: username ,picture : picture , lastname : lastname})
+)
+app.get('/download', isLoggedIn, (req, res) => 
+res.render('download')
 )
 
 // Auth Routes
