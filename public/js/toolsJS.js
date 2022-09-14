@@ -8,11 +8,16 @@ function createSignature(event){
     document.getElementById("img-search").style.display = "none";
     let $nameSignature = document.getElementById("first-last-name").value.toUpperCase();
     let $chargenameSignature = document.getElementById("charge-signature").value.toUpperCase();
+    let $pronoumSignature = document.getElementById("pronoum-signature").value;
+
     let $divSignature = document.getElementById("sign-ready");
     let $name = document.getElementById("name");
     let $charge = document.getElementById("charge");
+    let $pronoum = document.getElementById("pronoum");
+
     $name.textContent = $nameSignature;
     $charge.textContent = $chargenameSignature;
+    $pronoum.textContent = $pronoumSignature;
     $divSignature.style.visibility = "visible";
 }
 function CopyToClipboard() {

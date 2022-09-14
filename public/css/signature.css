@@ -8,3 +8,7 @@
     display: flex;
     flex-direction: row-reverse;
 }
+
+#pronoum-signature{
+color: rgba(173, 173, 173, 0.925);
+}

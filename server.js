@@ -35,7 +35,7 @@ const isLoggedIn = (req, res, next) => {
 
         next();
     } else {
-        res.sendStatus(401);
+        res.sendStatus(401); //aca redirigir a 401
     }
 }
 
@@ -53,10 +53,20 @@ app.get('/home', isLoggedIn, (req, res) =>
 // res.send(`Welcome mr ${req.user.displayName}!`)
 res.render('home', { username: username ,picture : picture , lastname : lastname})
 )
-app.get('/download', isLoggedIn, (req, res) => 
+app.get('/download', (req, res) => 
 res.render('download')
 )
 
+app.get('/tools',(req, res) => 
+res.render('tools')
+)
+
+app.get('/movements',(req, res) => 
+res.render('employe')
+)
+app.get('/guides',(req, res) => 
+res.render('guides')
+)
 // Auth Routes
 app.get('/google', passport.authenticate('google', { scope: ['profile', 'email'] }));
 
@@ -73,4 +83,4 @@ app.get('/logout', (req, res) => {
     res.redirect('/');
 })
 
-app.listen(3000, () => console.log(`Example app listening on port ${3000}!`))
+app.listen(3000, () => console.log(`app listening on port ${3000}!`))
