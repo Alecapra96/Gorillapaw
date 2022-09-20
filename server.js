@@ -53,19 +53,45 @@ app.get('/home', isLoggedIn, (req, res) =>
 // res.send(`Welcome mr ${req.user.displayName}!`)
 res.render('home', { username: username ,picture : picture , lastname : lastname})
 )
-app.get('/download', (req, res) => 
+
+app.get('/budgetsystem',isLoggedIn, (req, res) => 
+res.render('budgetsystem')
+)
+
+app.get('/download',isLoggedIn, (req, res) => 
 res.render('download')
 )
 
-app.get('/tools',(req, res) => 
+app.get('/tools',isLoggedIn,(req, res) => 
 res.render('tools')
 )
 
-app.get('/movements',(req, res) => 
+app.get('/movements',isLoggedIn,(req, res) => 
 res.render('employe')
 )
+
+//GUIDES
 app.get('/guides',(req, res) => 
 res.render('guides')
+)
+app.get('/guides/discord',(req, res) => 
+res.render('guide/guide-discord')
+)
+app.get('/guides/drive',(req, res) => 
+res.render('guide/guide-drive')
+)
+app.get('/guides/diskremap',(req, res) => 
+res.render('guide/guide-diskremap')
+)
+//DOCUMENTATION 
+app.get('/documentation',(req, res) => 
+res.render('documentation')
+)
+app.get('/documentation/diskmap',(req, res) => 
+res.render('documentation/diskmap')
+)
+app.get('/documentation/pingmonitor',(req, res) => 
+res.render('documentation/pingmonitor')
 )
 // Auth Routes
 app.get('/google', passport.authenticate('google', { scope: ['profile', 'email'] }));
