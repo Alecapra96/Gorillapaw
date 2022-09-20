@@ -1,28 +1,25 @@
-const searchContainer =document.getElementById("discord-guide");
 
-function hideAllContainer(){
-    searchContainer.style.display = "none";
-}
 
-function myFunction() { // Cada vez que se aprieta enter corre este evento
-    if (event.keyCode == 13) {
-    document.getElementById("img-search").style.display = "none";
-    var input = document.getElementById("Search");
-    var searchValue = input.value.toLowerCase();
-   
-    var els = document.getElementsByName("target"); //no anda por que se le resetea el class name 
-    hideAllContainer();
-    searchContainer.style.display = "block";
+function tableSearch() {
+    let input, filter, table, tr, td, txtValue;
 
-        for(var i = 0; i < els.length; i++){
-        let div = els[i].id;
+    //Intialising Variables
+    input = document.getElementById("input-guides");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("table-guides");
+    tr = table.getElementsByTagName("tr");
 
-        if (div.includes(searchValue)){
-
-            els[i].className = "is-active";
-            els[i].style.display = "block";
-
+    for (let i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[0];
+        if (td) {
+            txtValue = td.textContent || td.innerText;
+            console.log(txtValue)
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                tr[i].style.display = "";
+            } else {
+                tr[i].style.display = "none";
+            }
         }
     }
+
 }
-  }

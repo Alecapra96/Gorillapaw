@@ -30,7 +30,8 @@
             </div>
             <div id="navMenu" class="navbar-menu">
                 <div class="navbar-start">
-                    <a class="navbar-item" href="admin.html">
+                    <a class="navbar-item" href="/budgetsystem">
+
                         BUDGET SYSTEM
                     </a>
                               <a class="navbar-item" href="/download">
@@ -38,6 +39,9 @@
                     </a>
                               <a class="navbar-item" href="/tools">
                       TOOLS
+          </a>
+          <a class="navbar-item" href="/documentation">
+            DOCUMENTATION
           </a>
 
                 </div>
@@ -48,7 +52,7 @@
     <!-- END NAV -->
     <div class="container">
         <div class="columns">
-            <div class="column is-3 ">
+            <div class="column is-2 ">
                 <aside class="menu is-hidden-mobile py-5 px-5">
                     <p class="menu-label">
                         General
@@ -64,121 +68,26 @@
                 <div class="columns">
                     <div class="hero-body">
 
-                        <div class="columns is-desktop">
-                            <div class="column" id="searchbar">
-                              <input type="text" class="input is-large" id="Search" onkeyup="myFunction()" placeholder="Search here" title="Type in a name">
+                
+
+                                <input type="text" id="input-guides" class="inputSearch input is-large" onkeyup='tableSearch()' placeholder="Search">
+                                <div class="columns">
+                                <div class="column is-4">
+                                    <table class="table" id="table-guides" data-filter-control="true" data-show-search-clear-button="true">
+                                    <tr>
+                                        <th>Guides:</th>
+                                    </tr>
+                                    <tr><td><a href="guides/discord">Install discord</a></td></tr>     
+                                    <tr><td><a href="guides/diskremap">Map production disk</a></td></tr>  
+                                    <tr><td><a href="guides/drive">Map disk G - Drive</a></td></tr>  
+                                    </table>
+                                </div>
+                                <div class="column is-6">  
+                                    <img id="img-search" src="/img/Search.png" width = "500"  alt="">
+                                </div>
                             </div>
-                          </div>
-                          <div class="columns is-desktop">
-                            <div class="column" id="image-search">
-                              <img id="img-search" src="/img/Search.png" width = "500"  alt="">
-                            </div>
-                          </div>
-
-                        <div class="container is-inactive" id="discord-guide">
-                            <h1 class="title">Guide to install Discord</h1>
-                         
-
-                            <p>Step 1 : Download discord from this link ----> <a href="https://discord.com/api/downloads/distributions/app/installers/latest?channel=stable&platform=win&arch=x86">Dowload</a></p>
-                            <p>Step 2 : Find the .exe that you download and open</p>
-                            <img src="/img/discorddowload.png" alt="">
-                            <p>Step 3 : Wait until the installation is complete</p>
-                            <p>Step 4 : Use discord</p>
-                        </div>
-                        <div class="container is-inactive" id="drive-guide">
-                            <h1 class="title">Guide to map disk G</h1>
-                            <p>Step 1 : Find for google drive in discord</p>
-                            <img src="/img/googledrive.png" alt="">
-                            <p>(If you click in nothing happens ,check in the task bar for the google drive icon)</p>
-                            <img src="/img/googletaskbar.png" alt="">
-                            <p>Step 2 : Right click and login</p>
-
-
-                        </div>
-
-                        <div class="container is-inactive" id="diskmap-guide">
-                            <h1 class="title">Guide to map the production disk</h1>
-                            <p><strong>Step 1 :</strong></p>
-                            <p> Open the credential manager</p>
-                            <p>&nbsp;</p>
-
-                            <img src="/img/credential.png" alt="">
-                            <p>&nbsp;</p>
-
-                            <p> In windows credential:</p>
-                            <p>Search credential for the ip 12.2 and 13.2  and delete</p>
-                            <img src="/img/credential2.png" alt="">
-
-                            <p>&nbsp;</p>
-                            <p><strong>Step 2 :</strong></p>
-                            <p> Open the disk-map v3</p>
-                            <img src="/img/DISKMAP3.png" alt="">
-                            <p>&nbsp;</p>
-                            <p>Put your username and password ( Check is the username , not the complete mail)</p>
-                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Check the disk you want to map</p>
-                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Remember to have the vpn connected</p>
-                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND CHECK ALL AUTODESK PROGRAMS ARE CLOSED!</p>
-                            <p>&nbsp;</p>
-                            
-                            <p><strong>Step 3 :</strong></p>
-
-                            <p> Click in map</p>
-                            <p>&nbsp;</p>
-
-                            <img src="/img/diskmAP2.png" alt="">
-                            <p>&nbsp;</p>
-                            <p>&nbsp;</p>
-                            <p><strong>Step 4 :</strong></p>
-
-                            <p> Copy the remap.cmd to this addres : </p>
-                            <p>&nbsp;</p>
-
-                            <img src="/img/diskmapdir.png" alt="">
-                            <p>&nbsp;</p>
-                            <code>%appdata%\Microsoft\Windows\Start Menu\Programs\Startup</code>
-                            <p>or</p>
-                            <code>%appdata%\Microsoft\Windows\Start Menu\Programs\Inicio</code>
-                            <p>&nbsp;</p>
-                            <p> Depend of the lenguaje of windows </p>
-                            <p>&nbsp;</p>
-                            <p>&nbsp;</p>
-                            <p><strong>Step 5 :</strong></p>
-                            <p> Open the script and uncheck the option "Always ask before opening this file"</p>
-                            <p>&nbsp;</p>
-
-                            <img src="/img/diskmaperror.png" alt="">
-                            <p>&nbsp;</p>
-
-                            <p> When is oppened just close</p>
-
-
-                        </div>   
-
-                        <div class="container is-inactive" id="diskmap-guide">
-                            <h1 class="title">Guide to remap the production disk</h1>
-                            <p><strong>Step 1 :</strong></p>
-                            <p>When you turn on your pc this window will appear</p>
-                            <p>&nbsp;</p>
-                            <img src="/img/DISKMAP1.png" alt="">
-                            <p>&nbsp;</p>
-                            <p>If you don't want to map the disks, just close the window</p>
-                            <p>&nbsp;</p>
-                            <p><strong>Step 2 :</strong></p>
-                            <p>Without closing the window that opened</p>
-                            <p>Connect the vpn</p>
-                            <p>&nbsp;</p>
-                            <img src="/img/VPN.png" alt="">
-                            <p>&nbsp;</p>
-                            <p><strong>Step 3 :</strong></p>
-                            <p>Inside the first image window, press enter</p>
-                            <p>&nbsp;</p>
-                            <p>DONE!</p>
-
-
-                        </div>
-                           
-                            
-                            
+                        
+                  
                             
                     </div>
                 </div>
