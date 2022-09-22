@@ -93,6 +93,10 @@ res.render('documentation/diskmap')
 app.get('/documentation/pingmonitor',(req, res) => 
 res.render('documentation/pingmonitor')
 )
+
+app.get('/documentation/revit',(req, res) => 
+res.render('documentation/revit')
+)
 // Auth Routes
 app.get('/google', passport.authenticate('google', { scope: ['profile', 'email'] }));
 

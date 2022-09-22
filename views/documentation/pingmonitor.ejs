@@ -52,19 +52,147 @@
     <div class="container">
         <div class="columns">
             <div class="column is-2 ">
-             <a href="/documentation"><button>BACK</button></a>
+             <a href="/documentation"><button class="button  is-outlined mt-5">←</button></a>
             </div>
             <div class="column is-9">       
                 <div class="columns">
                     <div class="hero-body">
                         <div class="container">
                             <h1 class="title">Ping monitor</h1>
-                            <p><strong>Step 1 :</strong></p>
-                            <p> Open the credential manager</p>
+                            <p><strong>Funcion</strong></p>
+                            <p>Avisar cuando una remota pierde conexion.</p>
                             <p>&nbsp;</p>
+                            <img src="/img/pingmonitor.png" alt="">
+                            <p>&nbsp;</p>
+                        
+                            <p><strong>Funcionamiento</strong></p>
+                            <p>Es un script que cada 10 segundos tira ping a una IP X , si esta IP X no responde 3 veces el ping va a mostrar en la pantalla el status OFFLINE.</p>
+                            <p>&nbsp;</p>
+                            
+                            <p>&nbsp;</p>
+                            <img src="/img/pinghmonitor2.png" alt="">
+                            <p>&nbsp;</p>
+                            <p>La maquina que corre este script es la <code>192.168.12.127</code></p>
+                            <p>&nbsp;</p>
+                            <p>Accedemos a ella por medio de ssh con el user support.</p>
+                            <p>Para hacer funcionar el script , en la terminal colocamos node ping.js</p>
+                            <p>&nbsp;</p>
+                            <p>Este es el codigo del script:</p>
+                            <p>&nbsp;</p>                         
+                               <a href="https://github.com/Alecapra96/ping-monitor">Github link</a>
+                               <p>&nbsp;</p>    
+                            <pre>
+                                
+var ping = require('ping');
+var Table = require('easy-table');
+const nodemailer = require("nodemailer");
+const showBanner = require('node-banner');
 
-                            <img src="/img/credential.png" alt="">
-                            <p>&nbsp;</p>
+
+console.clear();
+const P = ['\\', '|', '/', '-'];
+let x = 0;
+const loader = setInterval(() => {
+  process.stdout.write(`\r${P[x++]}`);
+  x %= P.length;
+}, 250);
+
+setTimeout(() => {
+  clearInterval(loader);
+}, 5000);
+(async () => {
+    await showBanner('Ping monitor', 'A tool by @alecapra96 and chuli');
+    console.log("")
+    console.log("Wait 10 second when the loading end to see the pings")
+
+
+})();
+
+let transporter = nodemailer.createTransport({
+    service: "gmail",
+    auth: {
+        user: "pingmonitorvoyansi@gmail.com",
+        pass: "nosedicelacontraseña jejejeje"
+    },
+    tls: {
+        rejectUnauthorized: false,
+    },
+})
+var host2 = [
+    { ip: "192.168.xxx.xxx", Description: 'NOMBRE X', Hostname: "NOMBRE X", status: ('\x1b[32m ONLINE \x1b[0m')},
+  ]
+
+  var frequency = 5000;
+
+  host2.forEach(function(host){
+      let count = 0 ;
+      let countConsoleOutput = 0;
+      let date_ob = new Date();
+      let month = ("0" + (date_ob.getMonth() + 1)).slice(-2);
+      let date = ("0" + date_ob.getDate()).slice(-2);
+      let hours = date_ob.getHours();
+      let minutes = date_ob.getMinutes();
+      let dateOFFLINE = ( hours + ":" + minutes + " - " + date+ "/" + month  );
+      let mailOptions = {
+          from: "pingmonitorvoyansi@gmail.com",
+          to: "support@voyansi.com",
+          subject: "Soy la remota " + host.ip + " y me cai :S ",
+          text: "Hola humano , me acabo de caer a las  " + dateOFFLINE
+      }
+  
+      setInterval(function() {
+  ping.sys.probe( host.ip , function(isAlive) {
+  
+      var info = (isAlive?host.ip + " contact":host.ip +" contact:lost")
+  
+      if (!isAlive) {
+  
+  
+          count++
+          if (count === 15){
+              if (countConsoleOutput < 1){
+  
+                host.status = ('\x1b[91m \x1b[37m \x1b[41m OFFLINE \x1b[0m') + " at "+ dateOFFLINE;
+
+                transporter.sendMail(mailOptions, function(err, succes){
+                    if(err){
+                        console.log(err)
+                    }else{
+                        console.log("Email sent succesfully");
+                    }
+                })
+
+
+                countConsoleOutput = 2;
+
+            }
+        }else if(count > 15 ){
+            count = 0 ;
+        }
+    }
+    if(isAlive){
+
+        if (countConsoleOutput > 1){
+
+            host.status = ('\x1b[32m ONLINE \x1b[0m');
+            countConsoleOutput = 0;
+        }
+    }
+    });
+}, frequency);
+
+});
+setInterval(reloadTable, 5000);
+function reloadTable(){
+
+    console.clear();
+
+    console.log(Table.print(host2))
+}
+  
+  
+
+                            </pre>
 
 
 
