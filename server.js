@@ -31,8 +31,6 @@ const isLoggedIn = (req, res, next) => {
       username = req.user.name.givenName
       lastname = req.user.name.familyName
       picture = req.user.photos[0].value
-      console.log(lastname)
-
         next();
     } else {
         res.sendStatus(401); //aca redirigir a 401
@@ -58,16 +56,18 @@ app.get('/budgetsystem',isLoggedIn, (req, res) =>
 res.render('budgetsystem')
 )
 
-app.get('/download',isLoggedIn, (req, res) => 
-res.render('download')
+app.get('/software',isLoggedIn, (req, res) => 
+res.render('software')
 )
-
+//addins
+app.get('/addins',isLoggedIn, (req, res) => 
+res.render('addins')
+)
+app.get('/addins/tablegen',isLoggedIn, (req, res) => 
+res.render('addins/tablegen')
+)
 app.get('/tools',isLoggedIn,(req, res) => 
 res.render('tools')
-)
-
-app.get('/movements',isLoggedIn,(req, res) => 
-res.render('employe')
 )
 
 //GUIDES
@@ -83,6 +83,9 @@ res.render('guide/guide-drive')
 app.get('/guides/diskremap',(req, res) => 
 res.render('guide/guide-diskremap')
 )
+app.get('/guides/zoom',(req, res) => 
+res.render('guide/guide-zoom')
+)
 //DOCUMENTATION 
 app.get('/documentation',(req, res) => 
 res.render('documentation')
@@ -93,9 +96,11 @@ res.render('documentation/diskmap')
 app.get('/documentation/pingmonitor',(req, res) => 
 res.render('documentation/pingmonitor')
 )
-
 app.get('/documentation/revit',(req, res) => 
 res.render('documentation/revit')
+)
+app.get('/documentation/connector',(req, res) => 
+res.render('documentation/connector')
 )
 // Auth Routes
 app.get('/google', passport.authenticate('google', { scope: ['profile', 'email'] }));
