@@ -55,10 +55,15 @@ res.render('home', { username: username ,picture : picture , lastname : lastname
 app.get('/budgetsystem',isLoggedIn, (req, res) => 
 res.render('budgetsystem')
 )
+//softwre
 
 app.get('/software',isLoggedIn, (req, res) => 
 res.render('software')
 )
+app.get('/software/revit',isLoggedIn, (req, res) => 
+res.render('software/revit')
+)
+
 //addins
 app.get('/addins',isLoggedIn, (req, res) => 
 res.render('addins')

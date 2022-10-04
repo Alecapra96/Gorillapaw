@@ -20,8 +20,8 @@
         <div class="container">
             <div class="navbar-brand">
                 <a class="navbar-item" href="/home">
-                    <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28"> </a>
-                <div class="navbar-burger burger" data-target="navMenu">
+                  <img src="/img/isologo-GP-800px.png" > </a>
+                  <div class="navbar-burger burger" data-target="navMenu">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -62,31 +62,32 @@
                 Ten en cuenta que esta plataforma todavia esta en desarrollo , cualquier error que encuentres envia un mail a <span class="tag is-primary is-medium">acapra@voyansi.com</span></p>
               </div>
 
-              <div class="columns  is-centered" id="prueba">
-                <div class="column is-half">
-                  <p class="bd-notification is-primary">
-                    <h1 class="title is-1 has-text-centered">Welcome <%= username %>  <%= lastname %></h1>
-                </p>
-                </div>
-              </div>
-              <div class="columns">
-                <div class="column is-half">
-                  <p class="bd-notification is-primary">
-                    <img src=<%= picture %>>
-                </p>
-                </div>
-              </div>
+
+<div class="container">
+<div class="columns">
+  <div class="column is-6" id="parent-login">
+   
+      <div id="login-form">
+        <h1 class="title is-1 has-text-centered">Welcome </h1>
+        <h1 class="title is-2 has-text-centered"><%= username %>  <%= lastname %></h1>
+   
+
+    
+    </div>
+  </div>
+  <div class="column is-5 ">
+    <img src="/img/logoGP.png" > 
+  </div>
+
+</div>
+
+             
+
               
           
     </div>
 
 </body>
-<footer class="footer">
-    <div class="content has-text-centered">
-      <p>
-        <strong>Gorillapaw</strong> by <a href="https://github.com/Alecapra96">Alejandro Luis Capra</a>. 
-      </p>
-    </div>
-  </footer>
+
   <script async="" type="text/javascript" src="/js/bulma.js"></script>
   </html>

@@ -160,4 +160,13 @@ html, body {
     flex-direction: column;
     align-items: center;
   }
+#parent-login{
+display: flex;
+align-items: center;
+justify-content: center;
 
+}
+#login-form{
+  height: 200px;
+  
+}
