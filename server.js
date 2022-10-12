@@ -52,8 +52,8 @@ app.get('/home', isLoggedIn, (req, res) =>
 res.render('home', { username: username ,picture : picture , lastname : lastname})
 )
 
-app.get('/budgetsystem',isLoggedIn, (req, res) => 
-res.render('budgetsystem')
+app.get('/automation',isLoggedIn, (req, res) => 
+res.render('automation')
 )
 //softwre
 
@@ -74,7 +74,10 @@ res.render('addins/tablegen')
 app.get('/tools',isLoggedIn,(req, res) => 
 res.render('tools')
 )
-
+//FAMILIES
+app.get('/families',isLoggedIn, (req, res) => 
+res.render('families')
+)
 //GUIDES
 app.get('/guides',(req, res) => 
 res.render('guides')

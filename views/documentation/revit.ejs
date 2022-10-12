@@ -30,9 +30,8 @@
             </div>
             <div id="navMenu" class="navbar-menu">
                 <div class="navbar-start">
-                    <a class="navbar-item" href="/budgetsystem">
-
-                        BUDGET SYSTEM
+                    <a class="navbar-item" href="/automation">
+                        AUTOMATION
                     </a>
                     <a class="navbar-item" href="/software">
                         SOFTWARE
@@ -40,6 +39,9 @@
                       <a class="navbar-item" href="/addins">
                           ADDINS
                         </a>
+                        <a class="navbar-item" href="/families">
+                            FAMILIES
+                          </a>
                               <a class="navbar-item" href="/tools">
                       TOOLS
           </a>
@@ -62,15 +64,24 @@
                     <div class="hero-body">
                         <div class="container">
                             <h1 class="title">Errores conocidos en revit</h1>
-                            <p><strong>ERROR X </strong></p>
-                            <p>Cuento el error.</p>
+                            <p><strong>Error inesperado </strong></p>
+                            <p>Revit se cierra de la nada.</p>
                             <p>&nbsp;</p>
-                            <img src="/img/pingmonitor.png" alt="">
+                            <img src="/img/reviterror.png" alt="">
                             <p>&nbsp;</p>
-   
+                            <p><strong>Probar estas soluciones en este orden : </strong></p>
 
-
-
+                            <p>1 - Verificar que el usuario este usando la misma versión de Revit que sus compañeros</p>
+                            <p>&nbsp;</p>
+                            <p>2 - Actualizar autodesk connector</p>
+                            <p>&nbsp;</p>
+                            <p>3 - Borrar los temporales de rvt y de conector (todas las carpetas menos activity y logs), que se ubican en </p>
+                            <code>\AppData\Local\Autodesk\Revit\PacCache</code>
+                            <p>&nbsp;</p>
+                            <p>Y en esta direccion borro todas las carpetas </p>
+                            <code>\AppData\Local\Autodesk\Revit\Revit XXXX\colaboration cache</code>
+                            <p>&nbsp;</p>
+                            <p>4 - Reinstalar revit</p>
                         </div>   
                            
                     </div>
