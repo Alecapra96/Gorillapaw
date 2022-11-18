@@ -74,8 +74,17 @@
         <h1 class="title is-1 has-text-centered">Welcome </h1>
         <h1 class="title is-2 has-text-centered"><%= username %>  <%= lastname %></h1>
    
-
-    
+        <form 
+        method="POST" 
+        action="https://script.google.com/a/macros/voyansi.com/s/AKfycbwhagWZg7hf3HgRSSsJ94rSbOcCUEUBi3bf_aPrm_dM78FVM382hrrE5XRrTQX2rP4y/exec"
+      >
+      <!-- TOMO EL USERNAME Y EL LASTNAME DE GOOGLE Y LO MANDO EN EL IMPUT QUE LO PONTGO STYLE NONE ASI NO SE VE Y SOLO COMPLETA CON LA FECHA -->
+        <input name="Name" type="text"  style="display: none" placeholder="Name" value="<%= username %>  <%= lastname %>" required>
+        <input name="DateOfReserve" type = "date" required>
+        <button type="submit">Send</button>
+      </form>
+      
+        
     </div>
   </div>
   <div class="column is-5 ">

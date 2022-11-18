@@ -82,6 +82,29 @@
                             <code>\AppData\Local\Autodesk\Revit\Revit XXXX\colaboration cache</code>
                             <p>&nbsp;</p>
                             <p>4 - Reinstalar revit</p>
+                            <p>&nbsp;</p>
+                            <p>&nbsp;</p>
+                            <p>&nbsp;</p>
+
+                            <p><strong>RevitWorker.exe not found</strong></p>
+                            <p>&nbsp;</p>
+                            <img src="/img/RevitWorker.png" alt="">
+                            <p>&nbsp;</p>
+                            <p>Abro notepad y copio el siguiente codigo dentro , lo guardo con extension .bat</p>
+                            <p>&nbsp;</p>
+                            <code>@echo on</code>
+                            <p>&nbsp;</p>
+                            <code>cd /d c:\temp</code>
+                            <p>&nbsp;</p>
+                            <code>if not exist %windir%\system32\wbem goto TryInstall</code>
+                            <p>&nbsp;</p>
+                            <code>cd /d %windir%\system32\wbem</code>
+                            <p>&nbsp;</p>
+                            <code>net stop winmgmt</code>
+                            <p>&nbsp;</p>
+                            <code>winmgmt /kill</code>
+                            <p>&nbsp;</p>
+                            <p>Ejecuto como administrador</p>
                         </div>   
                            
                     </div>
