@@ -71,7 +71,7 @@ res.render('addins')
 app.get('/addins/tablegen',isLoggedIn, (req, res) => 
 res.render('addins/tablegen')
 )
-app.get('/tools',isLoggedIn,(req, res) => 
+app.get('/tools',(req, res) => 
 res.render('tools')
 )
 //FAMILIES
