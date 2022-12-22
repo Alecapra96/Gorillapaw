@@ -46,7 +46,7 @@ app.get('/', (req, res) => res.render('login'))
 app.get('/failed', (req, res) => res.send('You Failed to log in!'))
 
 // In this route you can see that if the user is logged in u can acess his info in: req.user
-app.get('/home', isLoggedIn, (req, res) => 
+app.get('/home', (req, res) => 
 
 // res.send(`Welcome mr ${req.user.displayName}!`)
 res.render('home', { username: username ,picture : picture , lastname : lastname})
@@ -57,18 +57,18 @@ res.render('automation')
 )
 //softwre
 
-app.get('/software',isLoggedIn, (req, res) => 
+app.get('/software', (req, res) => 
 res.render('software')
 )
-app.get('/software/revit',isLoggedIn, (req, res) => 
+app.get('/software/revit', (req, res) => 
 res.render('software/revit')
 )
 
 //addins
-app.get('/addins',isLoggedIn, (req, res) => 
+app.get('/addins', (req, res) => 
 res.render('addins')
 )
-app.get('/addins/tablegen',isLoggedIn, (req, res) => 
+app.get('/addins/tablegen', (req, res) => 
 res.render('addins/tablegen')
 )
 app.get('/tools',(req, res) => 
